@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install crunchydata/cb/<formula>`
+`brew install crunchydata/brew/<formula>`
 
-Or `brew tap crunchydata/cb` and then `brew install <formula>`.
+Or `brew tap crunchydata/brew` and then `brew install <formula>`.
 
 ## Documentation
 
