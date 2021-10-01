@@ -4,8 +4,8 @@
 ver = ARGV[0]
 p ver
 
-static_mac_x86 = "https://github.com/will/cb/releases/download/v#{ver}/cb-v#{ver}_macos_amd64.zip"
-bottle_mac_x86 = "https://github.com/will/homebrew-cb/releases/download/cb-#{ver}/cb-#{ver}.catalina.bottle.tar.gz"
+static_mac_x86 = "https://github.com/CrunchyData/bridge-cli/releases/download/v#{ver}/cb-v#{ver}_macos_amd64.zip"
+bottle_mac_x86 = "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-#{ver}/cb-#{ver}.catalina.bottle.tar.gz"
 
 `rm -rf scratch`
 `mkdir -p scratch`
