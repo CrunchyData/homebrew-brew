@@ -1,4 +1,4 @@
-# Will Cb
+# CrunchyData Brew
 
 ## How do I install these formulae?
 
