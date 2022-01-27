@@ -1,8 +1,8 @@
 class Cb < Formula
   desc "CLI for Crunchy Bridge"
   homepage "https://crunchybridge.com"
-  url "https://github.com/CrunchyData/bridge-cli/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "9aed8a69cba45d154651bb88210620cddc57cd23de586144e4a65d4dbec55b36"
+  url "https://github.com/CrunchyData/bridge-cli/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "f5ddf0eb73b47c2c0e8a7be44cc24cb46224d6ebae461821c56ec4c6b64167cf"
   license "GPL-3.0-or-later"
 
   bottle do
