@@ -13,7 +13,7 @@ module Ok
     super
   end
 end
-include Ok
+# include Ok
 
 `rm -rf scratch`
 `mkdir -p scratch`
