@@ -58,6 +58,6 @@ class Cb < Formula
   end
 
   test do
-    assert_match "Usage: cb", shell_output(bin / "cb --help")
+    assert_match "Usage", shell_output(bin / "cb --help")
   end
 end
