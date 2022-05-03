@@ -1,14 +1,15 @@
 class Cb < Formula
   desc "CLI for Crunchy Bridge"
   homepage "https://crunchybridge.com"
-  url "https://github.com/CrunchyData/bridge-cli/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "f5ddf0eb73b47c2c0e8a7be44cc24cb46224d6ebae461821c56ec4c6b64167cf"
+  url "https://github.com/CrunchyData/bridge-cli/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "9abda6a167ab46a93e0ac5724465f1793b56d21c5269074d058d1b2987b03544"
   license "GPL-3.0-or-later"
 
   bottle do
     root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-1.1.0"
-    sha256 cellar: :any,                 big_sur:      "d21e88d48de6893888f2f28b7611f82ec9f7d1d613fafffcae50f0eb273d136d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "df188bd72b4d9280be6a4bb4c0e3866e398b051a2ce29161e6a9210b3e55e689"
+    sha256 cellar: :any,                     arm64_big_sur: "6dabd29d0354c940ed5b3879bade2554d92290965ec1f56f83b7d607044f1e0c"
+    sha256 cellar: :any,                     big_sur:       "d21e88d48de6893888f2f28b7611f82ec9f7d1d613fafffcae50f0eb273d136d"
+    sha256 cellar: :any_skip_relocation,     x86_64_linux:  "df188bd72b4d9280be6a4bb4c0e3866e398b051a2ce29161e6a9210b3e55e689"
   end
 
   head do
@@ -21,6 +22,8 @@ class Cb < Formula
   depends_on "libevent"
   depends_on "openssl@1.1"
   depends_on "pcre"
+
+  depends_on "libssh2"
 
   uses_from_macos "zlib"
 
