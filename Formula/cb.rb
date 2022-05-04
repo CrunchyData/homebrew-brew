@@ -7,7 +7,8 @@ class Cb < Formula
 
   bottle do
     root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-1.3.0"
-    sha256 cellar: :any, big_sur: "381b31faec51aefef133d8984820c0816f75b1bb4df5e1a93cd64e47810c5dde"
+    sha256 cellar: :any, arm64_big_sur: "3d8f86c8add7c334fcf24efc36899329f25b72c3b155735580f3fccfcdddf205"
+    sha256 cellar: :any, big_sur:       "381b31faec51aefef133d8984820c0816f75b1bb4df5e1a93cd64e47810c5dde"
   end
 
   head do
