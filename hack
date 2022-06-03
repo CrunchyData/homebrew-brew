@@ -34,7 +34,7 @@ Dir.chdir "scratch"
 sha = `sha256sum cb-#{ver}.arm64_big_sur.bottle.tar.gz`.split.first
 
 Dir.chdir ".."
-`sed -i '' '10i\\
+`sed -i '10i\\
 sha256 cellar: :any, arm64_big_sur: "#{sha}"
 ' Formula/cb.rb`
 p `brew style --fix Formula/cb.rb`
