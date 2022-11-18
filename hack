@@ -5,7 +5,7 @@ ver = ARGV[0]
 p ver
 
 static_mac_x86 = "https://github.com/CrunchyData/bridge-cli/releases/download/v#{ver}/cb-v#{ver}_macos_amd64.zip"
-bottle_mac_x86 = "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-#{ver}/cb-#{ver}.big_sur.bottle.tar.gz"
+bottle_mac_x86 = "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-#{ver}/cb-#{ver}.monterey.bottle.tar.gz"
 
 module Ok
   def `(cmd)
@@ -29,13 +29,13 @@ Dir.chdir "scratch"
 `rm -rf cb/#{ver}/bin/cb`
 `mv binary cb/#{ver}/bin/cb`
 `chmod -w cb/#{ver}/bin/cb`
-`tar cvzf cb-#{ver}.arm64_big_sur.bottle.tar.gz cb`
+`tar cvzf cb-#{ver}.arm64_monterey.bottle.tar.gz cb`
 `rm -rf cb`
-sha = `sha256sum cb-#{ver}.arm64_big_sur.bottle.tar.gz`.split.first
+sha = `sha256sum cb-#{ver}.arm64_monterey.bottle.tar.gz`.split.first
 
 Dir.chdir ".."
 `sed -i '10i\\ \
-sha256 cellar: :any, arm64_big_sur: "#{sha}"
+sha256 cellar: :any, arm64_monterey: "#{sha}"
 ' Formula/cb.rb`
 p `brew style --fix Formula/cb.rb`
 p `brew audit --formula Formula/cb.rb`
