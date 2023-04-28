@@ -12,7 +12,7 @@ class Cb < Formula
   end
 
   head do
-    url "https://github.com/will/cb.git"
+    url "https://github.com/crunchydata/bridge-cli.git"
   end
 
   depends_on "crystal" => :build
@@ -22,7 +22,7 @@ class Cb < Formula
   depends_on "libevent"
   depends_on "libssh2"
   depends_on "openssl@1.1"
-  depends_on "pcre"
+  depends_on "pcre2"
 
   uses_from_macos "zlib"
 

@@ -31,10 +31,10 @@ Dir.chdir "scratch"
 `chmod -w cb/#{ver}/bin/cb`
 `tar cvzf cb-#{ver}.arm64_monterey.bottle.tar.gz cb`
 `rm -rf cb`
-sha = `sha256sum cb-#{ver}.arm64_monterey.bottle.tar.gz`.split.first
+sha = `shasum -a 256 cb-#{ver}.arm64_monterey.bottle.tar.gz`.split.first
 
 Dir.chdir ".."
-`sed -i '10i\\ \
+`sed -i '' '10i\\ \
 sha256 cellar: :any, arm64_monterey: "#{sha}"
 ' Formula/cb.rb`
 p `brew style --fix Formula/cb.rb`
