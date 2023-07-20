@@ -15,6 +15,17 @@ class Cb < Formula
     url "https://github.com/crunchydata/bridge-cli.git"
   end
 
+  depends_on "crystal" => :build
+  depends_on "make" => :build
+  depends_on "pkg-config" => :build
+  depends_on "bdw-gc"
+  depends_on "libevent"
+  depends_on "libssh2"
+  depends_on "openssl@1.1"
+  depends_on "pcre2"
+
+  uses_from_macos "zlib"
+
   on_linux do
     patch :p1, <<-EOS
       diff --git a/shard.lock b/shard.lock
@@ -45,17 +56,6 @@ class Cb < Formula
            gitlab: arctic-fox/spectator
     EOS
   end
-
-  depends_on "crystal" => :build
-  depends_on "make" => :build
-  depends_on "pkg-config" => :build
-  depends_on "bdw-gc"
-  depends_on "libevent"
-  depends_on "libssh2"
-  depends_on "openssl@1.1"
-  depends_on "pcre2"
-
-  uses_from_macos "zlib"
 
   def install
     system "make", "build", "RELEASE=1"
