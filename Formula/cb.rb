@@ -26,36 +26,34 @@ class Cb < Formula
 
   uses_from_macos "zlib"
 
-  on_linux do
-    patch :p1, <<-EOS
-      diff --git a/shard.lock b/shard.lock
-      index 3928ff7..7b3f7b0 100644
-      --- a/shard.lock
-      +++ b/shard.lock
-      @@ -1,9 +1,5 @@
-       version: 2.0
-       shards:
-      -  ameba:
-      -    git: https://github.com/crystal-ameba/ameba.git
-      -    version: 1.3.1
-      -
-         any_hash:
-           git: https://github.com/sija/any_hash.cr.git
-           version: 0.2.5
-      diff --git a/shard.yml b/shard.yml
-      index 2e06d09..1d7e50f 100644
-      --- a/shard.yml
-      +++ b/shard.yml
-      @@ -14,8 +14,6 @@ dependencies:
-           github: epoch/tallboy
+  patch :p1, <<-EOS
+    diff --git a/shard.lock b/shard.lock
+    index 3928ff7..7b3f7b0 100644
+    --- a/shard.lock
+    +++ b/shard.lock
+    @@ -1,9 +1,5 @@
+     version: 2.0
+     shards:
+    -  ameba:
+    -    git: https://github.com/crystal-ameba/ameba.git
+    -    version: 1.3.1
+    -
+       any_hash:
+         git: https://github.com/sija/any_hash.cr.git
+         version: 0.2.5
+    diff --git a/shard.yml b/shard.yml
+    index 2e06d09..1d7e50f 100644
+    --- a/shard.yml
+    +++ b/shard.yml
+    @@ -14,8 +14,6 @@ dependencies:
+         github: epoch/tallboy
 
-       development_dependencies:
-      -  ameba:
-      -    github: crystal-ameba/ameba
-         spectator:
-           gitlab: arctic-fox/spectator
-    EOS
-  end
+     development_dependencies:
+    -  ameba:
+    -    github: crystal-ameba/ameba
+       spectator:
+         gitlab: arctic-fox/spectator
+  EOS
 
   def install
     system "make", "build", "RELEASE=1"
