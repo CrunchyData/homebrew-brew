@@ -21,7 +21,7 @@ class Cb < Formula
   depends_on "bdw-gc"
   depends_on "libevent"
   depends_on "libssh2"
-  depends_on "openssl@1.1"
+  depends_on "openssl@3"
   depends_on "pcre2"
 
   uses_from_macos "zlib"
