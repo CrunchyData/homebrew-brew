@@ -6,9 +6,8 @@ class Cb < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.4.1"
-    sha256 cellar: :any, arm64_monterey: "b55b097c852bc1681d7c4308b32ba137e5e1c81c21f590e46539eccb0e02e4a4"
-    sha256 cellar: :any, monterey:       "2862a7880ddb358c3b7cd52d91d2ded0c4dfd808a1f5f1af0bbc93142490ff10"
+    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.4.2"
+    sha256 cellar: :any, monterey: "f6bc990e70b1abc47100241042ac81b782c53d4818f42d729e5fa71e0dccbada"
   end
 
   head do
