@@ -8,9 +8,8 @@ class Cb < Formula
   head "https://github.com/crunchydata/bridge-cli.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.4.4"
-    sha256 cellar: :any, arm64_monterey: "35f02f5b6b9ff98e3b1a40a22d9e4265eb7d05c9fd112161322ad0d21ad3f788"
-    sha256 cellar: :any, monterey:       "e28ed768605b7a1907cb947e68f0401cbbd1d39359f67b689bbaa289fdca5de0"
+    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.5.0"
+    sha256 cellar: :any, monterey: "07ffc0a275bd5f08f791f0d507012bc2a255e3a08d5f1726a4dce946495b16f1"
   end
 
   depends_on "crystal" => :build
