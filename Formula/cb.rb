@@ -9,7 +9,8 @@ class Cb < Formula
 
   bottle do
     root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.5.0"
-    sha256 cellar: :any, monterey: "07ffc0a275bd5f08f791f0d507012bc2a255e3a08d5f1726a4dce946495b16f1"
+    sha256 cellar: :any, arm64_monterey: "6b382d22ba8886c4e53f052ed714509a4d7335f110dd3601681f75efd1cc75a2"
+    sha256 cellar: :any, monterey:       "07ffc0a275bd5f08f791f0d507012bc2a255e3a08d5f1726a4dce946495b16f1"
   end
 
   depends_on "crystal" => :build
