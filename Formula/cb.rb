@@ -1,37 +1,35 @@
 class Cb < Formula
   desc "CLI for Crunchy Bridge"
   homepage "https://crunchybridge.com"
-  url "https://github.com/CrunchyData/bridge-cli/archive/refs/tags/v3.5.0.tar.gz"
-  sha256 "a076c8dfae202e8e52e21cc3571ce6580b36a5505e722b1e9ec06a5136c54a34"
+  version "3.5.1"
   license "GPL-3.0-or-later"
 
-  head "https://github.com/crunchydata/bridge-cli.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.5.0"
-    sha256 cellar: :any, arm64_monterey: "6b382d22ba8886c4e53f052ed714509a4d7335f110dd3601681f75efd1cc75a2"
-    sha256 cellar: :any, monterey:       "07ffc0a275bd5f08f791f0d507012bc2a255e3a08d5f1726a4dce946495b16f1"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    sha256 "fa27a40de8ca7c0b44ec287437f263f851aff06a8a7f0fd7a04b0d10c6a06ff6"
   end
 
-  depends_on "crystal" => :build
-  depends_on "make" => :build
-  depends_on "pkg-config" => :build
-  depends_on "bdw-gc"
-  depends_on "libevent"
-  depends_on "libssh2"
-  depends_on "openssl@3"
-  depends_on "pcre2"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    sha256 "1e61508df88eb77a3ff4aac1f4303285ef0b5368273de3de3233b1b8c6aeca37"
+  end
 
-  uses_from_macos "zlib"
+  if OS.linux? && Hardeware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    sha256 "0976e629a00abbf3cc9dfe983824bd5900a1c02780fc764f272e3dd30f11a7d4"
+  end
+
+  if OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    sha256 "bf2f13a39d156ad17d6e14f0d56124f0b6be878688c4cd979bb560bfa85d8e4a"
+  end
 
   def install
-    system "make", "build", "RELEASE=1"
-
-    bin.install "bin/cb"
-    fish_completion.install "completions/cb.fish"
+    bin.install "cb"
+    # fish_completion.install "completions/cb.fish"
   end
 
   test do
-    assert_match "Usage", shell_output(bin / "cb --help")
+    assert_match "cb v#{version}", shell_output(bin / "cb version")
   end
 end
