@@ -15,12 +15,12 @@ class Cb < Formula
   end
 
   if OS.linux? && Hardeware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_linux_aarch64.zip"
     sha256 "0976e629a00abbf3cc9dfe983824bd5900a1c02780fc764f272e3dd30f11a7d4"
   end
 
   if OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_linux_amd64.zip"
     sha256 "bf2f13a39d156ad17d6e14f0d56124f0b6be878688c4cd979bb560bfa85d8e4a"
   end
 
