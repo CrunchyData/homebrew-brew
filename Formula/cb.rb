@@ -10,7 +10,7 @@ class Cb < Formula
   end
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
+    url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_amd64.zip"
     sha256 "1e61508df88eb77a3ff4aac1f4303285ef0b5368273de3de3233b1b8c6aeca37"
   end
 
