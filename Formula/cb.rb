@@ -4,6 +4,11 @@ class Cb < Formula
   version "3.6.1"
   license "GPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/CrunchyData/homebrew-brew/releases/download/cb-3.6.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "02444b3f92eabda525c77905095ed002f6a9486b93b07b197222872c40d5feec"
+  end
+
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
     sha256 "b0c52dbe6cc9ddcaf2c278bac2849e93f1e48f7bde575eb7e831a35fe8ff7848"
