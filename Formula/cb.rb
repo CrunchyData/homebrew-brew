@@ -3,6 +3,7 @@ class Cb < Formula
   homepage "https://crunchybridge.com"
   version "3.6.4"
   license "GPL-3.0-or-later"
+  revision 1
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
