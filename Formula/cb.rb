@@ -1,27 +1,27 @@
 class Cb < Formula
   desc "CLI for Crunchy Bridge"
   homepage "https://crunchybridge.com"
-  version "3.6.6"
+  version "3.6.7"
   license "GPL-3.0-or-later"
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_arm64.zip"
-    sha256 "5d2e7b5513056f7fb5834aa9825a115dabb6ad4d37a1263e26f5673a16bf08b9"
+    sha256 "9be8e53e9f679e877384d2708ff5658698e01d844ba1a274008fb3a853b757b7"
   end
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_macos_amd64.zip"
-    sha256 "1dd1ffe66129d06c02fbf8c0c2770ca000e08a7bc03e307437cfd568f3fa5191"
+    sha256 "aae4f0169f56eae77cfa8ccc2b9db1b1bbe214399c05cc6caec491d5fd0f2fa5"
   end
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_linux_aarch64.zip"
-    sha256 "5a58a4e34c6c2d85a4719bb256441eae41606cb427fad1391aa1a54e8156d1ea"
+    sha256 "1a90f4c4c273959c681e0cb8a1191ca7c86b460d5e3ae2658f3ef5164200f2aa"
   end
 
   if OS.linux? && Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
     url "https://github.com/CrunchyData/bridge-cli/releases/download/v#{version}/cb-v#{version}_linux_amd64.zip"
-    sha256 "77fa6dd285aa9f1a38b17ffcae6b9b66c5b6bb09330e038bf3de1a98b6ca4396"
+    sha256 "55df54a13761c3a3bb36f1bfc7a5d187cb79ea8aff33b621afa423a5cefe2ce9"
   end
 
   def install
